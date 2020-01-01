@@ -1,0 +1,37 @@
+class Employee:
+    emp_count=0
+    m_count=0
+    f_count=0
+    asst_man=0
+    salary_10k=0
+    def __init__(self):
+        Employee.emp_count`+=1 
+        self.name= input("Enter name of employe")
+        self.designation= input("designation")
+        self.gender = input("enter gender (m=male, f=female)")
+        self.doj = input("doj")
+        self.salary=int(input("salary"))
+        self.check_employee()
+    
+    def check_employee(self):
+        if self.designation.lower() == "asst manager":
+            Employee.asst_man +=1
+    
+    
+        if self.gender=="m":
+            Employee.m_count +=1
+        else:
+            Employee.f_count +=1 
+        
+        if self.salary > 10000:
+            Employee.salary_10k +=1 
+        return None
+    
+    def total_employee():
+        return Employee.emp_count, Employee.f_count
+        
+    def asst_man_count():
+        return Employee.asst_man
+        
+    def salary_10k_count():
+        return Employee.salary_10k
